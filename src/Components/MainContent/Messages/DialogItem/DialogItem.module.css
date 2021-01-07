@@ -1,0 +1,44 @@
+.dialogsItems__dialog a.active {
+    color: #A52A2A !important;
+}
+
+.dialogsItems__dialog {
+    padding: 5px;
+}
+
+.dialog {
+    display: flex;
+}
+
+.dialogsItems__dialog:hover {
+    background: #A9A9A9;
+    border-radius: 10%;
+    border-radius: 5px;
+}
+
+
+.dialogsItems__dialog a {
+    color: black !important;
+    text-decoration: none;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    display: flex;
+}
+
+.nickName {
+    padding: 15px;
+}
+
+.avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    pointer-events: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}

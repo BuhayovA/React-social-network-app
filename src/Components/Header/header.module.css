@@ -1,0 +1,25 @@
+.header {
+  grid-area: h;
+  background-color: #6200ee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  display: flex;
+}
+
+.title {
+  margin: 12px;
+  color: white;
+  text-shadow: 0 6px 0 black;
+  justify-content: center;
+  text-align: center;
+
+  /*font-size: 40px;*/
+  /*cursor: pointer;*/
+}
+
+.header img {
+  /* width: 57px;
+  height: 57px; */
+}
