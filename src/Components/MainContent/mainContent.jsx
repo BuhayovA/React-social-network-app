@@ -19,7 +19,7 @@ const MainContent = (props) => {
             {/*<Route path="/settings" component={Settings}/>*/}
 
             <Route path="/messages" render={() =>  <Dialogs dialogs={props.messenger.dialogs} messages={props.messenger.messages}/>}/>
-            <Route path="/profile" render={() =>  <Profile postsData={props.profilePage.posts}/> }/>
+            <Route path="/profile" render={() =>  <Profile postsData={props.profilePage.posts} addPost={props.addPost}/> } />
             <Route path="/music" render={() =>  <Music /> }/>
             <Route path="/news" render={() =>  <News /> }/>
             <Route path="/settings" render={() =>  <Settings /> }/>
