@@ -3,11 +3,25 @@
     margin: 0 auto;
     width: 1200px;
 
+
     grid-template-areas:
-    "h h h"
-    "n c c";
+    "h h"
+    "n c";
 
     grid-template-rows: 60px 1fr;
     grid-template-columns: 2fr 10fr;
     grid-gap: 10px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /*-moz-user-select: none;*/
+    /*-khtml-user-select: none;*/
+    /*user-select: none;*/
 }

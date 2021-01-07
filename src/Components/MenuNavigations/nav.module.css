@@ -1,54 +1,67 @@
 .nav {
-  grid-area: n;
-  background-color: #6200ee;
-  color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  user-select: none;
-  /*width: 195px;*/
-  /*height: 150px;*/
+    grid-area: n;
+    background-color: #6200ee;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    /*width: 195px;*/
+    /*height: 150px;*/
 
 
-  /*left: 0;*/
-  /*right: 10;*/
-  /*top: 0;*/
-  /*bottom: 0;*/
-  /*width: 200px;*/
+    /*left: 0;*/
+    /*right: 10;*/
+    /*top: 0;*/
+    /*bottom: 0;*/
+    /*width: 200px;*/
 }
 
 .item {
-  padding-left: 5px;
+    padding-left: 5px;
 }
 
 .item a.active {
-  /*border-bottom: 1px solid #9e47ff;*/
-  color: #00BFFF !important;
+    /*border-bottom: 1px solid #9e47ff;*/
+    color: #00BFFF !important;
 }
 
 .item:hover {
-  background: #9e47ff;
-  border-radius: 10%;
-  border-radius: 5px;
+    background: #9e47ff;
+    border-radius: 10%;
+    border-radius: 5px;
 }
 
 .nav div {
-  margin: 5px;
+    margin: 5px;
 }
 
 .nav a {
-  color: white !important;
-  cursor: pointer;
-  text-decoration: none;
+    color: white !important;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .logo {
-  /*width: 20px;*/
-  /*height: 20px;*/
-  margin-top: 3px;
-  padding-right: 3px;
+    /*width: 20px;*/
+    /*height: 20px;*/
+    margin-top: 3px;
+    padding-right: 3px;
 }
 
 .item a {
-  display: flex;
+    display: flex;
+}
+
+
+.titleFriends {
+    justify-content: center;
+    display: flex;
+    font-size: 20px;
+    padding: 5px;
+}
+
+
+.friendsBoard {
+    display: flex;
 }

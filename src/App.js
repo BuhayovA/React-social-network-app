@@ -9,7 +9,7 @@ const App = (props) => {
     return (
         <div className='app-wrapper'>
             <Header/>
-            <MenuNavigations/>
+            <MenuNavigations friendsNav={props.state.friendsNav}/>
             <MainContent profilePage={props.state.profilePage}
                          messenger={props.state.messengerPage}
             />

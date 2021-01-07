@@ -7,7 +7,7 @@ import DialogItem from './DialogItem/DialogItem'
 const Dialogs = (props) => {
 
     let dialogsElements = props.dialogs.map( dialog => <DialogItem id={dialog.id} name={dialog.name} imgSrc={dialog.imgSrc}/> )
-    let messagesElements = props.messages.map( message => <Message message={message.message}/> )
+    let messagesElements = props.messages.map( message => <Message message={message.message} imgSrc={message.imgSrc}/> )
 
     // let dialogsElements =
     //     [
@@ -23,6 +23,7 @@ const Dialogs = (props) => {
             </div>
             <div className={style.messages}>
                 {messagesElements}
+                <input type="text" className={style.input}/> <button>send</button>
             </div>
         </div>
     );
