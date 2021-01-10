@@ -14,6 +14,9 @@ const App = (props) => {
             <MainContent profilePage={props.state.profilePage}
                          messenger={props.state.messengerPage}
                          addPost={props.addPost}
+                         addTextPost={props.addTextPost}
+                         addMessage={props.addMessage}
+                         addTextMessage={props.addTextMessage}
             />
         </div>
 

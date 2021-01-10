@@ -15,11 +15,13 @@ const Dialogs = (props) => {
     //         <DialogItem id={dialogs[1].id} name={dialogs[1].name} imgSrc={dialogs[1].imgSrc}/>
     //     ]
 
-    let newMessageElement = React.createRef();
 
+    let onChangeMessageInput = (event) => {
+        let text = event.target.value;
+        props.addTextMessage(text);
+    }
     let addMessage = () => {
-        let message = newMessageElement.current.value;
-        alert(message);
+        props.addMessage();
     }
 
     return (
@@ -30,9 +32,9 @@ const Dialogs = (props) => {
             <div className={style.messages}>
                 {messagesElements}
                 <div>
-                    <textarea placeholder="Write a message..." ref={newMessageElement} className={style.input}/>
+                    <textarea onChange={onChangeMessageInput} value={props.newMessage} placeholder="Write a message..."  className={style.input}/>
                 </div>
-                <button onClick={addMessage}>send</button>
+                <button onClick={addMessage} disabled={!props.newMessage}>send</button>
             </div>
         </div>
     );

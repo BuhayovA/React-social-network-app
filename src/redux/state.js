@@ -1,5 +1,4 @@
-import {rerenderEntireTree} from  "../render"
-
+import {rerenderEntireTree} from "../render"
 
 let state = {
     profilePage: {
@@ -8,6 +7,7 @@ let state = {
             {id: 2, message: `Happy birthday, for me`, likesValue: 21},
             {id: 3, message: `It's my first post!`, likesValue: 67},
         ],
+        newPostText: '',
     },
     messengerPage: {
         dialogs: [
@@ -40,8 +40,8 @@ let state = {
             {id: 3, message: `Happy birthday, for me`},
             {id: 4, message: 'Egor'},
             {id: 5, message: `This is my firth post`},
-            {id: 6, message: 'Mikhail'},
         ],
+        newMessage: '',
     },
     friendsNav: [
         {id: 1, name: 'Alexey', imgSrc: 'https://i.redd.it/wellr7jjiv011.jpg'},
@@ -69,16 +69,43 @@ let state = {
     ]
 }
 
+if (localStorage.getItem("state")){
+     state = JSON.parse(localStorage.getItem("state"))
+}
 
-export let addPost = (postMessage) => {
+
+window.state = state; /*TODO*/
+
+export let addPost = () => {
     let newPost = {
         id: state.profilePage.posts.length + 1,
-        message: postMessage,
+        message: state.profilePage.newPostText,
         likesValue: 0
     };
-
-
     state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = ''
+
+    rerenderEntireTree(state);
+}
+
+export let addMessage = () => {
+    let addNewMassage = {
+        id: state.messengerPage.messages.length + 1,
+        message: state.messengerPage.newMessage,
+    }
+
+    state.messengerPage.messages.push(addNewMassage);
+    state.messengerPage.newMessage = ''
+    rerenderEntireTree(state);
+}
+
+export let addTextMessage = (text) => {
+    state.messengerPage.newMessage = text
+    rerenderEntireTree(state);
+}
+
+export let addTextPost = (text) => {
+    state.profilePage.newPostText = text
     rerenderEntireTree(state);
 }
 
