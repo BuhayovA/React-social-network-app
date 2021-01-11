@@ -6,6 +6,10 @@
     opacity: 90%;
 }
 
+.friends img {
+    cursor: pointer;
+}
+
 .friends {
     padding: 2px;
 }

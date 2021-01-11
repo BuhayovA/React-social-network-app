@@ -1,4 +1,5 @@
-import {rerenderEntireTree} from "../render"
+let rerenderEntireTree = () => {
+}
 
 let state = {
     profilePage: {
@@ -74,9 +75,19 @@ if (localStorage.getItem("state")){
 }
 
 
+
+// let a = {
+//     hello: 'Hello kids',
+//     no: 'no kids',
+//     buy: 'buy kids',
+// };
+// localStorage.setItem('a', JSON.stringify(a))
+//
+// console.log(JSON.parse(localStorage.getItem("a")))
+
 window.state = state; /*TODO*/
 
-export let addPost = () => {
+export const addPost = () => {
     let newPost = {
         id: state.profilePage.posts.length + 1,
         message: state.profilePage.newPostText,
@@ -88,7 +99,7 @@ export let addPost = () => {
     rerenderEntireTree(state);
 }
 
-export let addMessage = () => {
+export const addMessage = () => {
     let addNewMassage = {
         id: state.messengerPage.messages.length + 1,
         message: state.messengerPage.newMessage,
@@ -99,14 +110,18 @@ export let addMessage = () => {
     rerenderEntireTree(state);
 }
 
-export let addTextMessage = (text) => {
+export const addTextMessage = (text) => {
     state.messengerPage.newMessage = text
     rerenderEntireTree(state);
 }
 
-export let addTextPost = (text) => {
+export const addTextPost = (text) => {
     state.profilePage.newPostText = text
     rerenderEntireTree(state);
+}
+
+export const subscribe = (observer) => {
+    rerenderEntireTree = observer;
 }
 
 export default state

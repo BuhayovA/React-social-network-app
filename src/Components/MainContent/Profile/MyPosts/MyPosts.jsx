@@ -22,10 +22,10 @@ const MyPosts = (props) => {
             <h3>My Posts</h3>
             <div>
                 <div>
-                    <textarea onChange={onChangePostInput} name="Add new post" placeholder="Write a message..." ref={newPostElement} value={props.newPostText}/>
+                    <textarea className={style.texareaAddPost} onChange={onChangePostInput} name="Add new post" placeholder="Write a message..." ref={newPostElement} value={props.newPostText}/>
                 </div>
                 <div>
-                    <button onClick={addPost} disabled={!props.newPostText}> Add</button>
+                    <button className={style.buttonAddPost} onClick={addPost} disabled={!props.newPostText}> Add</button>
                 </div>
             </div>
             <div className={style.posts}>
