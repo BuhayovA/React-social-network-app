@@ -2,10 +2,6 @@
     padding:  10px;
 }
 
-.textareaAddPost {
-    text-align: justify;
-}
-
 .inputItem {
     display: flex;
     align-items: center;

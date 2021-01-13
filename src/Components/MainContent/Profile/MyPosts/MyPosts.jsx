@@ -2,9 +2,8 @@ import React from 'react';
 import style from "./MyPosts.module.css"
 import Post from "./Post/Post"
 import Input from '@material-ui/core/Input'
-import Button from '@material-ui/core/Button'
-// import {AiOutlineSend} from 'react-icons/ai'
-import {MdSend} from 'react-icons/md'
+import {AiOutlineSend} from 'react-icons/ai'
+import IconButton from '@material-ui/core/IconButton';
 
 const MyPosts = (props) => {
 
@@ -28,11 +27,11 @@ const MyPosts = (props) => {
             <h3>My Posts</h3>
             <div className={style.inputItem}>
                 <div>
-                    <Input className={style.textareaAddPost} color={'primary'} onChange={onChangePostInput} name="Add new post" placeholder="Write a post..." inputRef={newPostElement} value={props.newPostText} />
+                    <Input color={'primary'} onChange={onChangePostInput} name="Add new post" placeholder="Write a post..." inputRef={newPostElement} value={props.newPostText} />
                     {/*<textarea className={style.texareaAddPost} onChange={onChangePostInput} name="Add new post" placeholder="Write a message..." ref={newPostElement} value={props.newPostText}/>*/}
                 </div>
                 <div>
-                    <Button variant={'text'} color={'primary'} size={'medium'} endIcon={<MdSend/>} onClick={addPost} disabled={!props.newPostText}>Send</Button>
+                    <IconButton  children={<AiOutlineSend/>} color={'primary'} size={'medium'} onClick={addPost} disabled={!props.newPostText}/>
                     {/*<button className={style.buttonAddPost} onClick={addPost}  disabled={!props.newPostText}> Add</button>*/}
                 </div>
             </div>

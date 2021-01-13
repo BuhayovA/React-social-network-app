@@ -14,7 +14,7 @@ const Post = (props) => {
                 <div className={style.item__message}>{props.message}</div>
             </div>
             <div>
-                <Button size={'small'} color={'primary'} startIcon={<BiLike color='red'/> } variant={'contained'}>{props.likesValue}</Button>
+                <Button size={'small'} color={'primary'} startIcon={<BiLike color='red'/> } variant={'outlined'}>{props.likesValue}</Button>
             </div>
         </div>
     )
