@@ -1,6 +1,5 @@
 import React from 'react';
 import style from "./header.module.css"
-import logo from '../../img/HatchfulExport-All/mainLogo.png'
 
 
 const Header = () => {

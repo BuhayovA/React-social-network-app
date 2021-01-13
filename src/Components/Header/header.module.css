@@ -1,6 +1,6 @@
 .header {
   grid-area: h;
-  background-color: #6200ee;
+  background-color: var(--primary);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   -moz-user-select: none;
   -khtml-user-select: none;

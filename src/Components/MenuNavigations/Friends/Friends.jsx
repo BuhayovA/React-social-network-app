@@ -6,11 +6,13 @@ import {CgProfile} from "react-icons/cg";
 
 const Friends = (props) => {
     return (
-        <NavLink to={`/friends/${props.id}`} activeClassName={style.active}>
-            <div className={style.friends}>
+
+        <div className={style.friends}>
+            <NavLink to={`/friends/${props.id}`} activeClassName={style.active}>
                 <img src={props.imgSrc} alt="" className="avatar"/>
-            </div>
-        </NavLink>
+            </NavLink>
+        </div>
+
     )
 }
 
