@@ -22,12 +22,9 @@
     <list default="true" id="4010b07b-07f7-4f73-b477-d7c8e9ad142b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Messages/Massenges.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Messages/Massenges.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Profile/MyPosts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Profile/MyPosts/MyPosts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Profile/Profile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/MainContent/mainContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/mainContent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/state.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +53,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.last.introduce.type" value="CONST" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -126,7 +124,7 @@
       <workItem from="1610009659924" duration="672000" />
       <workItem from="1610013129709" duration="51656000" />
       <workItem from="1610438954948" duration="23796000" />
-      <workItem from="1610700313634" duration="4613000" />
+      <workItem from="1610700313634" duration="7562000" />
     </task>
     <servers />
   </component>

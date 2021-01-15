@@ -1,3 +1,8 @@
+const ADD_POST = 'ADD-POST';
+const ADD_TEXT_POST = 'ADD-TEXT-POST';
+const ADD_TEXT_MESSAGE = 'ADD-TEXT-MESSAGE';
+const ADD_MESSAGE = 'ADD-MESSAGE';
+
 
 let store = {
     _state: {
@@ -17,7 +22,11 @@ let store = {
                     name: 'Andrey',
                     imgSrc: 'https://chpic.su/_data/stickers/t/thelegendofaang/thelegendofaang_014.webp'
                 },
-                {id: 3, name: 'Maxim', imgSrc: 'https://i.pinimg.com/736x/f5/ec/14/f5ec1493f8cf15a2f2d017ac9afe628d.jpg'},
+                {
+                    id: 3,
+                    name: 'Maxim',
+                    imgSrc: 'https://i.pinimg.com/736x/f5/ec/14/f5ec1493f8cf15a2f2d017ac9afe628d.jpg'
+                },
                 {
                     id: 4,
                     name: 'Egor',
@@ -75,7 +84,7 @@ let store = {
 
         return this._state
     },
-    subscribe (observer){
+    subscribe(observer) {
         this._callSubscriber = observer;
     },
 
@@ -110,10 +119,8 @@ let store = {
     //     this._state.profilePage.newPostText = text
     //     this._callSubscriber(this._state);
     // },
-
-
     dispatch(action) {
-        if(action.type === 'ADD-POST'){
+        if (action.type === ADD_POST) {
             let newPost = {
                 id: this._state.profilePage.posts.length + 1,
                 message: this._state.profilePage.newPostText,
@@ -123,7 +130,7 @@ let store = {
             this._state.profilePage.newPostText = ''
 
             this._callSubscriber(this._state);
-        }else if (action.type === 'ADD-MESSAGE'){
+        } else if (action.type === ADD_MESSAGE) {
             let addNewMassage = {
                 id: this._state.messengerPage.messages.length + 1,
                 message: this._state.messengerPage.newMessage,
@@ -132,15 +139,31 @@ let store = {
             this._state.messengerPage.messages.push(addNewMassage);
             this._state.messengerPage.newMessage = ''
             this._callSubscriber(this._state);
-        }else if (action.type === 'ADD-TEXT-MESSAGE'){
+        } else if (action.type === ADD_TEXT_MESSAGE) {
             this._state.messengerPage.newMessage = action.text
             this._callSubscriber(this._state);
-        }else if (action.type === 'ADD-TEXT-POST'){
+        } else if (action.type === ADD_TEXT_POST) {
             this._state.profilePage.newPostText = action.text
             this._callSubscriber(this._state);
         }
     },
 }
+
+
+export const addPostActionCreator = () => ({type: ADD_POST})
+export const addMessageActionCreator = () => ({type: ADD_MESSAGE,})
+
+
+export const addTextPostActionCreator = (text) => ({
+    type: ADD_TEXT_POST,
+    text: text
+})
+
+export const addTextMessageActionCreator = (text) => ({
+    type: ADD_TEXT_MESSAGE,
+    text: text
+})
+
 
 
 // if (localStorage.getItem("state")){

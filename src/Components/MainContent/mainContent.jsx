@@ -20,8 +20,8 @@ const MainContent = (props) => {
 
             <Route path="/messages" render={() =>  <Dialogs dialogs={props.messenger.dialogs}
                                                             messages={props.messenger.messages}
-                                                            dispatch={props.dispatch}
                                                             newMessage={props.messenger.newMessage}
+                                                            dispatch={props.dispatch}
             />}/>
             <Route path="/profile" render={() =>  <Profile postsData={props.profilePage.posts}
                                                            newPostText={props.profilePage.newPostText}

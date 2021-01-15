@@ -4,24 +4,26 @@ import Post from "./Post/Post"
 import Input from '@material-ui/core/Input'
 import {AiOutlineSend} from 'react-icons/ai'
 import IconButton from '@material-ui/core/IconButton';
+import {addPostActionCreator, addTextPostActionCreator} from '../../../../redux/state'
+
+
+
 
 const MyPosts = (props) => {
 
-    let text = 'Hello'
-
-    let postElements = props.postsData.map(element => <Post message={element.message} likesValue={element.likesValue}/> )
+    let postElements = props.postsData.map(element => <Post message={element.message} likesValue={element.likesValue}/>)
 
     let newPostElement = React.createRef();
 
     let addPost = () => {
         // props.addPost()
-        props.dispatch({type: 'ADD-POST'})
+        props.dispatch(addPostActionCreator())
     }
 
     let onChangePostInput = () => {
         let text = newPostElement.current.value;
         // props.addTextPost(text);
-        props.dispatch({type: 'ADD-TEXT-POST', text: text})
+        props.dispatch(addTextPostActionCreator(text))
     }
 
     return (
@@ -29,11 +31,13 @@ const MyPosts = (props) => {
             <h3>My Posts</h3>
             <div className={style.inputItem}>
                 <div>
-                    <Input className={style.input} color={'primary'} onChange={onChangePostInput} name="Add new post" placeholder="Write a post..." inputRef={newPostElement} value={props.newPostText} />
+                    <Input className={style.input} color={'primary'} onChange={onChangePostInput} name="Add new post"
+                           placeholder="Write a post..." inputRef={newPostElement} value={props.newPostText}/>
                     {/*<textarea className={style.texareaAddPost} onChange={onChangePostInput} name="Add new post" placeholder="Write a message..." ref={newPostElement} value={props.newPostText}/>*/}
                 </div>
                 <div>
-                    <IconButton  children={<AiOutlineSend/>} color={'primary'} size={'medium'} onClick={addPost} disabled={!props.newPostText}/>
+                    <IconButton children={<AiOutlineSend/>} color={'primary'} size={'medium'} onClick={addPost}
+                                disabled={!props.newPostText}/>
                     {/*<button className={style.buttonAddPost} onClick={addPost}  disabled={!props.newPostText}> Add</button>*/}
                 </div>
             </div>
