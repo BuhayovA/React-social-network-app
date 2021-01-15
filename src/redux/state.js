@@ -1,5 +1,4 @@
 
-
 let store = {
     _state: {
         profilePage: {
@@ -69,47 +68,77 @@ let store = {
             },
         ]
     },
-    getState() {
-
-      return this._state
-    },
-
     _callSubscriber() {
     },
 
-    addPost() {
+    getState() {
 
-        let newPost = {
-            id: this._state.profilePage.posts.length + 1,
-            message: this._state.profilePage.newPostText,
-            likesValue: 0
-        };
-        this._state.profilePage.posts.push(newPost);
-        this._state.profilePage.newPostText = ''
-
-        this._callSubscriber(this._state);
-    },
-    addMessage() {
-        let addNewMassage = {
-            id: this._state.messengerPage.messages.length + 1,
-            message: this._state.messengerPage.newMessage,
-        }
-
-        this._state.messengerPage.messages.push(addNewMassage);
-        this._state.messengerPage.newMessage = ''
-        this._callSubscriber(this._state);
-    },
-    addTextMessage(text) {
-        this._state.messengerPage.newMessage = text
-        this._callSubscriber(this._state);
-    },
-    addTextPost(text){
-
-        this._state.profilePage.newPostText = text
-        this._callSubscriber(this._state);
+        return this._state
     },
     subscribe (observer){
         this._callSubscriber = observer;
+    },
+
+    // addPost() {
+    //
+    //     let newPost = {
+    //         id: this._state.profilePage.posts.length + 1,
+    //         message: this._state.profilePage.newPostText,
+    //         likesValue: 0
+    //     };
+    //     this._state.profilePage.posts.push(newPost);
+    //     this._state.profilePage.newPostText = ''
+    //
+    //     this._callSubscriber(this._state);
+    // },
+    // addMessage() {
+    //     let addNewMassage = {
+    //         id: this._state.messengerPage.messages.length + 1,
+    //         message: this._state.messengerPage.newMessage,
+    //     }
+    //
+    //     this._state.messengerPage.messages.push(addNewMassage);
+    //     this._state.messengerPage.newMessage = ''
+    //     this._callSubscriber(this._state);
+    // },
+    // addTextMessage(text) {
+    //     this._state.messengerPage.newMessage = text
+    //     this._callSubscriber(this._state);
+    // },
+    // addTextPost(text){
+    //
+    //     this._state.profilePage.newPostText = text
+    //     this._callSubscriber(this._state);
+    // },
+
+
+    dispatch(action) {
+        if(action.type === 'ADD-POST'){
+            let newPost = {
+                id: this._state.profilePage.posts.length + 1,
+                message: this._state.profilePage.newPostText,
+                likesValue: 0
+            };
+            this._state.profilePage.posts.push(newPost);
+            this._state.profilePage.newPostText = ''
+
+            this._callSubscriber(this._state);
+        }else if (action.type === 'ADD-MESSAGE'){
+            let addNewMassage = {
+                id: this._state.messengerPage.messages.length + 1,
+                message: this._state.messengerPage.newMessage,
+            }
+
+            this._state.messengerPage.messages.push(addNewMassage);
+            this._state.messengerPage.newMessage = ''
+            this._callSubscriber(this._state);
+        }else if (action.type === 'ADD-TEXT-MESSAGE'){
+            this._state.messengerPage.newMessage = action.text
+            this._callSubscriber(this._state);
+        }else if (action.type === 'ADD-TEXT-POST'){
+            this._state.profilePage.newPostText = action.text
+            this._callSubscriber(this._state);
+        }
     },
 }
 

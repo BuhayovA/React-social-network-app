@@ -13,10 +13,7 @@ const App = (props) => {
             <MenuNavigations friendsNav={props.state.friendsNav}/>
             <MainContent profilePage={props.state.profilePage}
                          messenger={props.state.messengerPage}
-                         addPost={props.addPost}
-                         addTextPost={props.addTextPost}
-                         addMessage={props.addMessage}
-                         addTextMessage={props.addTextMessage}
+                         dispatch={props.dispatch}
             />
         </div>
 

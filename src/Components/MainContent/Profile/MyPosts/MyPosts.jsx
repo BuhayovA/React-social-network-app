@@ -14,12 +14,14 @@ const MyPosts = (props) => {
     let newPostElement = React.createRef();
 
     let addPost = () => {
-        props.addPost()
+        // props.addPost()
+        props.dispatch({type: 'ADD-POST'})
     }
 
     let onChangePostInput = () => {
         let text = newPostElement.current.value;
-        props.addTextPost(text);
+        // props.addTextPost(text);
+        props.dispatch({type: 'ADD-TEXT-POST', text: text})
     }
 
     return (
@@ -27,7 +29,7 @@ const MyPosts = (props) => {
             <h3>My Posts</h3>
             <div className={style.inputItem}>
                 <div>
-                    <Input color={'primary'} onChange={onChangePostInput} name="Add new post" placeholder="Write a post..." inputRef={newPostElement} value={props.newPostText} />
+                    <Input className={style.input} color={'primary'} onChange={onChangePostInput} name="Add new post" placeholder="Write a post..." inputRef={newPostElement} value={props.newPostText} />
                     {/*<textarea className={style.texareaAddPost} onChange={onChangePostInput} name="Add new post" placeholder="Write a message..." ref={newPostElement} value={props.newPostText}/>*/}
                 </div>
                 <div>
