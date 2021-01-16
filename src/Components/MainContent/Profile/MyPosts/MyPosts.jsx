@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import style from "./MyPosts.module.css"
 import Post from "./Post/Post"
 import Input from '@material-ui/core/Input'
@@ -17,7 +17,9 @@ const MyPosts = (props) => {
     const postsData = useSelector(profilePostsSelector)
     let dispatch = useDispatch();
 
-    let postElements = postsData.map(element => <Post message={element.message} likesValue={element.likesValue}/>)
+    let postElements = useMemo(()=> {
+        return postsData.map(element => <Post message={element.message} likesValue={element.likesValue}/>)
+    }, [postsData])
 
     let newPostElement = React.createRef();
 
