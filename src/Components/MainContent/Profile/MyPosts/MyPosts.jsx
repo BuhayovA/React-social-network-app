@@ -4,7 +4,7 @@ import Post from "./Post/Post"
 import Input from '@material-ui/core/Input'
 import {AiOutlineSend} from 'react-icons/ai'
 import IconButton from '@material-ui/core/IconButton';
-import {addPostActionCreator, addTextPostActionCreator} from '../../../../redux/state'
+import {addPostActionCreator, addTextPostActionCreator} from '../../../../redux/ProfilePageReducer'
 
 
 
