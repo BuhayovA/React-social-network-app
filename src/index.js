@@ -5,6 +5,7 @@ import './index.css';
 import store from './redux/reduxStore'
 import App from './App';
 import {BrowserRouter} from "react-router-dom";
+import {Provider} from "react-redux";
 // import {addPost , addTextPost, addMessage, addTextMessage, subscribe} from "./redux/state"
 
 
@@ -15,7 +16,9 @@ let rerenderEntireTree = (state) => {
     ReactDOM.render(
         <React.StrictMode>
             <BrowserRouter>
+                <Provider store={store}>
                 <App state={store.getState()} dispatch={store.dispatch.bind(store)} />
+                </Provider>
             </BrowserRouter>
         </React.StrictMode>,
         document.getElementById('root')

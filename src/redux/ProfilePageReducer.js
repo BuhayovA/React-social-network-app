@@ -1,3 +1,4 @@
+import { createSelector } from 'reselect'
 const ADD_POST = 'ADD-POST';
 const ADD_TEXT_POST = 'ADD-TEXT-POST';
 
@@ -36,5 +37,10 @@ export const addTextPostActionCreator = (text) => ({
     text: text
 })
 export const addPostActionCreator = () => ({type: ADD_POST})
+
+export const proflePageSelector = (state) => state.profilePage
+
+export const profilePostsSelector = createSelector(proflePageSelector, (profilePage) => profilePage.posts)
+
 
 export default profilePageReducer

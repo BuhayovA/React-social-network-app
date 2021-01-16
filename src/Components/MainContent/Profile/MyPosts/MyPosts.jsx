@@ -4,26 +4,34 @@ import Post from "./Post/Post"
 import Input from '@material-ui/core/Input'
 import {AiOutlineSend} from 'react-icons/ai'
 import IconButton from '@material-ui/core/IconButton';
-import {addPostActionCreator, addTextPostActionCreator} from '../../../../redux/ProfilePageReducer'
-
-
+import {
+    addPostActionCreator,
+    addTextPostActionCreator,
+    profilePostsSelector
+} from '../../../../redux/ProfilePageReducer'
+import {useDispatch, useSelector} from "react-redux";
 
 
 const MyPosts = (props) => {
 
-    let postElements = props.postsData.map(element => <Post message={element.message} likesValue={element.likesValue}/>)
+    const postsData = useSelector(profilePostsSelector)
+    let dispatch = useDispatch();
+
+    let postElements = postsData.map(element => <Post message={element.message} likesValue={element.likesValue}/>)
 
     let newPostElement = React.createRef();
 
+
+
     let addPost = () => {
         // props.addPost()
-        props.dispatch(addPostActionCreator())
+        dispatch(addPostActionCreator())
     }
 
     let onChangePostInput = () => {
         let text = newPostElement.current.value;
         // props.addTextPost(text);
-        props.dispatch(addTextPostActionCreator(text))
+        dispatch(addTextPostActionCreator(text))
     }
 
     return (
