@@ -4,7 +4,6 @@ import Post from "./Post/Post"
 import Input from '@material-ui/core/Input'
 import {AiOutlineSend} from 'react-icons/ai'
 import IconButton from '@material-ui/core/IconButton';
-import {addPostActionCreator, addTextPostActionCreator} from '../../../../redux/ProfilePageReducer'
 
 
 
@@ -16,14 +15,12 @@ const MyPosts = (props) => {
     let newPostElement = React.createRef();
 
     let addPost = () => {
-        // props.addPost()
-        props.dispatch(addPostActionCreator())
+        props.addPost()
     }
 
     let onChangePostInput = () => {
         let text = newPostElement.current.value;
-        // props.addTextPost(text);
-        props.dispatch(addTextPostActionCreator(text))
+        props.addTextPost(text);
     }
 
     return (

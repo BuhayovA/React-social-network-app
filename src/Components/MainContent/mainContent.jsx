@@ -1,32 +1,20 @@
 import React from 'react';
 import style from './mainContent.module.css';
 import Profile from "./Profile/Profile"
-import Dialogs from "./Messages/Massenges"
+import Dialogs from "./Messages/Messages"
 import Music from "./Music/Music"
 import News from "./News/News"
 import Settings from "./Settings/Settings"
 import {Route} from "react-router-dom";
+import MessagesContainer from "./Messages/MessagesContainer";
 
 
 const MainContent = (props) => {
 
     return (
         <div className={style.mainContent}>
-            {/*<Route path="/messages" component={Dialogs}/>*/}
-            {/*<Route path="/profile" component={Profile}/>*/}
-            {/*<Route path="/music" component={Music}/>*/}
-            {/*<Route path="/news" component={News}/>*/}
-            {/*<Route path="/settings" component={Settings}/>*/}
-
-            <Route path="/messages" render={() =>  <Dialogs dialogs={props.messenger.dialogs}
-                                                            messages={props.messenger.messages}
-                                                            newMessage={props.messenger.newMessage}
-                                                            dispatch={props.dispatch}
-            />}/>
-            <Route path="/profile" render={() =>  <Profile postsData={props.profilePage.posts}
-                                                           newPostText={props.profilePage.newPostText}
-                                                           dispatch={props.dispatch}
-            /> } />
+            <Route path="/messages" render={() =>  <MessagesContainer store={props.store}/>}/>
+            <Route path="/profile" render={() =>  <Profile store={props.store}/> } />
             <Route path="/music" render={() =>  <Music /> }/>
             <Route path="/news" render={() =>  <News /> }/>
             <Route path="/settings" render={() =>  <Settings /> }/>

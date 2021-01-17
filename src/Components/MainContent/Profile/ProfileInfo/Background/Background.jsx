@@ -1,4 +1,3 @@
-import React, { useState} from 'react';
 import style from "./Background.module.css"
 
 const Background = () => {

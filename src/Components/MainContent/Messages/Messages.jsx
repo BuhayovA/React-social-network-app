@@ -1,24 +1,22 @@
 import React from 'react';
 import style from "./Messages.module.css"
-import Message from "./Message/Massenges"
+import Message from "./Message/Massege"
 import DialogItem from './DialogItem/DialogItem'
-import {addMessageActionCreator, addTextMessageActionCreator} from "../../../redux/MessengerPageReducer";
 
 
 const Dialogs = (props) => {
+    debugger
 
     let dialogsElements = props.dialogs.map(dialog => <DialogItem id={dialog.id} name={dialog.name}
                                                                   imgSrc={dialog.imgSrc}/>)
     let messagesElements = props.messages.map(message => <Message message={message.message} imgSrc={message.imgSrc}/>)
 
+    let onAddMessage = () => {
+        props.addMessage();
+    }
     let onChangeMessageInput = (event) => {
         let text = event.target.value;
-        // props.addTextMessage(text);
-        props.dispatch(addTextMessageActionCreator(text))
-    }
-    let addMessage = () => {
-        // props.addMessage();
-        props.dispatch(addMessageActionCreator())
+        props.addTextMessage(text);
     }
 
     return (
@@ -32,7 +30,7 @@ const Dialogs = (props) => {
                     <textarea onChange={onChangeMessageInput} value={props.newMessage} placeholder="Write a message..."
                               className={style.input}/>
                 </div>
-                <button onClick={addMessage} disabled={!props.newMessage}>send</button>
+                <button onClick={onAddMessage} disabled={!props.newMessage}>send</button>
             </div>
         </div>
     );

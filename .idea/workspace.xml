@@ -20,10 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4010b07b-07f7-4f73-b477-d7c8e9ad142b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/MainContent/Messages/MessagesContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/MainContent/Profile/MyPosts/MyPostsContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Messages/Massenges.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Messages/Messages.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Messages/Message/Massenges.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Messages/Message/Massege.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Profile/MyPosts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Profile/MyPosts/MyPosts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Profile/MyPosts/MyPosts.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Profile/MyPosts/MyPosts.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Profile/ProfileInfo/Background/Background.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Profile/ProfileInfo/Background/Background.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MainContent/mainContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/mainContent.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +61,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Components/MainContent/Messages" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -67,6 +75,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Nezna\Desktop\Prog\React projects\social network\my-app\src\Components\MainContent\Messages" />
+      <recent name="C:\Users\Nezna\Desktop\Prog\React projects\social network\my-app\src\Components\MainContent\Profile\MyPosts" />
       <recent name="C:\Users\Nezna\Desktop\Prog\React projects\social network\my-app\src\Components\MainContent\Messages\Message" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
