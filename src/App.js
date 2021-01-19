@@ -11,7 +11,7 @@ const App = (props) => {
         <div className='app-wrapper'>
             <Header/>
             <MenuNavigations friendsNav={props.state.friendsNav}/>
-            <MainContent store={props.store}/>
+            <MainContent/>
         </div>
 
     );

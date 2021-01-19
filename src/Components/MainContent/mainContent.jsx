@@ -1,7 +1,6 @@
 import React from 'react';
 import style from './mainContent.module.css';
 import Profile from "./Profile/Profile"
-import Dialogs from "./Messages/Messages"
 import Music from "./Music/Music"
 import News from "./News/News"
 import Settings from "./Settings/Settings"
@@ -13,8 +12,8 @@ const MainContent = (props) => {
 
     return (
         <div className={style.mainContent}>
-            <Route path="/messages" render={() =>  <MessagesContainer store={props.store}/>}/>
-            <Route path="/profile" render={() =>  <Profile store={props.store}/> } />
+            <Route path="/messages" render={() =>  <MessagesContainer/>}/>
+            <Route path="/profile" render={() =>  <Profile/> } />
             <Route path="/music" render={() =>  <Music /> }/>
             <Route path="/news" render={() =>  <News /> }/>
             <Route path="/settings" render={() =>  <Settings /> }/>
