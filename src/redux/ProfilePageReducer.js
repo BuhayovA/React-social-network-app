@@ -7,24 +7,30 @@ let initialState = {
         {id: 2, message: `Happy birthday, for me`, likesValue: 21},
         {id: 3, message: `It's my first post!`, likesValue: 67},
     ],
-        newPostText: '',
+    newPostText: '',
 }
 
 
 const profilePageReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_POST:
+        case ADD_POST: {
             let newPost = {
                 id: state.posts.length + 1,
                 message: state.newPostText,
                 likesValue: 0
             };
-            state.posts.push(newPost);
-            state.newPostText = ''
-            return state
-        case ADD_TEXT_POST:
-            state.newPostText = action.text
-            return state
+            return {
+                ...state,
+                newPostText: '',
+                posts: [newPost , ...state.posts],
+            }
+        }
+        case ADD_TEXT_POST: {
+            return {
+                ...state,
+                newPostText: action.text,
+            }
+        }
         default:
             return state
     }

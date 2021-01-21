@@ -10,6 +10,14 @@ let reducers = combineReducers({
 });
 
 
+
 let store = createStore(reducers);
+
+
+window.store = store
+
+// if (localStorage.getItem("state")){
+//     store.state = JSON.parse(localStorage.getItem("state"))
+// }
 
 export default store

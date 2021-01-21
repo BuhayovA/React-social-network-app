@@ -20,16 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4010b07b-07f7-4f73-b477-d7c8e9ad142b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/StoreContext.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Messages/Messages.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Messages/Messages.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Messages/MessagesContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Messages/MessagesContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Profile/MyPosts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Profile/MyPosts/MyPosts.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Profile/MyPosts/MyPostsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Profile/MyPosts/MyPostsContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/MainContent/mainContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/mainContent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MenuNavigations/Friends/Friends.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MenuNavigations/Friends/Friends.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MenuNavigations/nav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MenuNavigations/nav.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/MessengerPageReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/MessengerPageReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ProfilePageReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ProfilePageReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reduxStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reduxStore.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +141,7 @@
       <workItem from="1610438954948" duration="23796000" />
       <workItem from="1610700313634" duration="10670000" />
       <workItem from="1610780842663" duration="13064000" />
-      <workItem from="1611046310375" duration="4444000" />
+      <workItem from="1611046310375" duration="21224000" />
     </task>
     <servers />
   </component>

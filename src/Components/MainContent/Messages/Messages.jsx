@@ -5,11 +5,10 @@ import DialogItem from './DialogItem/DialogItem'
 
 
 const Dialogs = (props) => {
-    debugger
 
-    let dialogsElements = props.dialogs.map(dialog => <DialogItem id={dialog.id} name={dialog.name}
+    let dialogsElements = props.dialogs.map(dialog => <DialogItem id={dialog.id} name={dialog.name} key={dialog.id}
                                                                   imgSrc={dialog.imgSrc}/>)
-    let messagesElements = props.messages.map(message => <Message message={message.message} imgSrc={message.imgSrc}/>)
+    let messagesElements = props.messages.map(message => <Message message={message.message} key={message.id} imgSrc={message.imgSrc}/>)
 
     let onAddMessage = () => {
         props.addMessage();

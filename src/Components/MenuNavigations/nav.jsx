@@ -14,7 +14,7 @@ const MenuNavigations = (props) => {
     let friendsElement = [];
 
     for (let i = 0; i < 3; i++) {
-        friendsElement[i] = <Friends imgSrc={props.friendsNav[i].imgSrc} id={props.friendsNav[i].id} name={props.friendsNav[i].name} />
+        friendsElement[i] = <Friends imgSrc={props.friendsNav[i].imgSrc} key={props.friendsNav.id} id={props.friendsNav[i].id} name={props.friendsNav[i].name} />
     }
     return (
         <div className={style.nav}>

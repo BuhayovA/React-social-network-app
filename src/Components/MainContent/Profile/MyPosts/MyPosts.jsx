@@ -10,7 +10,7 @@ import IconButton from '@material-ui/core/IconButton';
 
 const MyPosts = (props) => {
 
-    let postElements = props.postsData.map(element => <Post message={element.message} likesValue={element.likesValue}/>)
+    let postElements = props.postsData.map(element => <Post message={element.message} key={element.id} likesValue={element.likesValue}/>)
 
     let newPostElement = React.createRef();
 

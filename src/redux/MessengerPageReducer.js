@@ -41,19 +41,23 @@ let initialState = {
 };
 
 const messengerPageReducer = (state = initialState, action) => {
+
     switch (action.type) {
         case ADD_MESSAGE:
             let addNewMassage = {
-                id: state.length + 1,
+                id: state.messages.length + 1,
                 message: state.newMessage,
             }
-
-            state.messages.push(addNewMassage);
-            state.newMessage = ''
-            return state
+            return {
+                ...state,
+                newMessage: '',
+                messages: [...state.messages, addNewMassage],
+            }
         case ADD_TEXT_MESSAGE:
-            state.newMessage = action.text
-            return state
+            return {
+                ...state,
+                newMessage: action.text
+            }
         default:
             return state
     }
