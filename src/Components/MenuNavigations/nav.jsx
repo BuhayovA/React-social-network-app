@@ -7,6 +7,7 @@ import {BsNewspaper} from 'react-icons/bs';
 import {AiOutlineMessage} from 'react-icons/ai';
 import {IoMdMusicalNote} from 'react-icons/io';
 import {IoSettingsOutline} from 'react-icons/io5';
+import {FiUsers} from "react-icons/all";
 
 
 const MenuNavigations = (props) => {
@@ -47,6 +48,12 @@ const MenuNavigations = (props) => {
                     <NavLink to='/settings' activeClassName={style.active}>
                         <IoSettingsOutline className={style.logo}/>
                         Settings
+                    </NavLink>
+                </div>
+                <div className={style.item}>
+                    <NavLink to='/users' activeClassName={style.active}>
+                        <FiUsers className={style.logo}/>
+                        Users
                     </NavLink>
                 </div>
             </nav>

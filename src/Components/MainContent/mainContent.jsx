@@ -6,6 +6,7 @@ import News from "./News/News"
 import Settings from "./Settings/Settings"
 import {Route} from "react-router-dom";
 import MessagesContainer from "./Messages/MessagesContainer";
+import UsersContainer from "./Users/UsersContainer";
 
 
 const MainContent = (props) => {
@@ -17,6 +18,7 @@ const MainContent = (props) => {
             <Route path="/music" render={() =>  <Music /> }/>
             <Route path="/news" render={() =>  <News /> }/>
             <Route path="/settings" render={() =>  <Settings /> }/>
+            <Route path="/users" render={() =>  <UsersContainer /> }/>
         </div>
     );
 }

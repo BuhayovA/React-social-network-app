@@ -27,11 +27,9 @@ const MyPosts = (props) => {
         <div className={style.myPosts}>
             <h3>My Posts</h3>
             <div className={style.inputItem}>
-                <div>
-                    <Input className={style.input} color={'primary'} onChange={onChangePostInput} name="Add new post"
+                    <Input fullWidth className={style.input} color={'primary'} onChange={onChangePostInput} name="Add new post"
                            placeholder="Write a post..." inputRef={newPostElement} value={props.newPostText}/>
                     {/*<textarea className={style.} onChange={onChangePostInput} name="Add new post" placeholder="Write a message..." ref={newPostElement} value={props.newPostText}/>*/}
-                </div>
                 <div>
                     <IconButton children={<AiOutlineSend/>} color={'primary'} size={'medium'} onClick={addPost}
                                 disabled={!props.newPostText}/>
