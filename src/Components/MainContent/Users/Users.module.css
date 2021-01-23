@@ -5,3 +5,14 @@
 /*    align-items: center;*/
 /*    justify-content: space-between;*/
 /*}*/
+
+.avatarColor {
+    background-color: var(--primary);
+}
+
+.progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
