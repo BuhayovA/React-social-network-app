@@ -1,11 +1,20 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import style from './Users.module.css';
-import {IconButton, Input} from "@material-ui/core";
+import {
+    Avatar, Divider,
+    IconButton,
+    List,
+    ListItem,
+    ListItemAvatar,
+    ListItemSecondaryAction,
+    ListItemText,
+    Typography
+} from "@material-ui/core";
 import {RiUserFollowLine, RiUserUnfollowLine} from "react-icons/all";
 
 
-const Users = (props) => {
-    let users = [{
+const Users = ({users,setUsers, follow, unfollow }) => {
+    let usersData = [{
         id: 1,
         fullName: 'Alexey B.',
         status: 'I am a boss',
@@ -79,45 +88,46 @@ const Users = (props) => {
         },
     ]
 
-    if(props.users.length === 0) {
-        props.setUsers(users)
+    // useEffect(()=> {
+    //     setUsers(usersData)
+    //     return () => {
+    //         setUsers([])
+    //     }
+    // }, [users])
+
+    if (!users.length) {
+        setUsers(usersData)
     }
 
+
+
     return (
-        <div>
+        <List>
             {
-                props.users.map(user => <div key={user.id}>
-                    <div className={style.user}>
-                            <span>
-                            <div><img src={user.imgSrc} alt="Avatar" className='avatar'/></div>
-                                {user.followed
-                                    ? <IconButton color={"secondary"} children={<RiUserUnfollowLine/>}
-                                                  onClick={() => props.unfollow(user.id)}/>
-                                    : <IconButton children={<RiUserFollowLine/>} color={"primary"}
-                                                  onClick={() => props.follow(user.id)}/>}
-                        </span>
-                        <span className={style.description}>
-                            <span>
-                                <div>
-                                    {user.fullName}
-                                </div>
-                                <div className={style.userStatus}>
-                                    {user.status}
-                                </div>
-                            </span>
-                        </span>
-                        <div className={style.locations}>
-                            <div>
-                                {user.location.country},
-                            </div>
-                            <div>
-                                {user.location.city}
-                            </div>
-                        </div>
-                    </div>
-                </div>)
+                users.map(user => <>
+                    <ListItem className={style.user}>
+                        <ListItemAvatar>
+                            <Avatar>
+                                <img src={user.imgSrc} alt="Avatar" className='avatar'/>
+                            </Avatar>
+                        </ListItemAvatar>
+                        <ListItemText primary={user.fullName} secondary={user.status}/>
+
+                        <ListItemSecondaryAction style={{display: 'flex', alignItems: 'center'}}>
+                            <Typography
+                                variant='caption'>{`${user.location.country}, ${user.location.city}`}</Typography>
+                            {user.followed
+                                ? <IconButton color={"secondary"} children={<RiUserUnfollowLine/>}
+                                              onClick={() => unfollow(user.id)}/>
+                                : <IconButton children={<RiUserFollowLine/>} color={"primary"}
+                                              onClick={() => follow(user.id)}/>}
+                        </ListItemSecondaryAction>
+                    </ListItem>
+                    <Divider/>
+
+                </>)
             }
-        </div>
+        </List>
     );
 }
 export default Users;
