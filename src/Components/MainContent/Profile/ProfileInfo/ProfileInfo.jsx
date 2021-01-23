@@ -2,7 +2,6 @@ import React from 'react';
 import style from "./ProfileInfo.module.css"
 
 import Background from "./Background/Background"
-
 const ProfileInfo = () => {
     return (
         <div>
@@ -10,7 +9,7 @@ const ProfileInfo = () => {
             </div>
             <Background/>
             <div className={style.descriptionBlock}>
-                ava + description
+                ava+descriptions
             </div>
         </div>
     )

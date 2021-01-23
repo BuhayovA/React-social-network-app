@@ -1,4 +1,23 @@
 .user {
     display: flex;
     padding: 10px;
+    /*border-radius: 10px;*/
+    border-bottom: 1px solid var(--primaryVariant);
+    margin: 5px;
+}
+
+.userStatus {
+    opacity: 0.5;
+    padding-top: 10px;
+}
+
+.description {
+    padding: 10px;
+    display: flex;
+}
+
+.locations {
+    padding: 10px;
+    text-align: right;
+    margin-left: auto;
 }

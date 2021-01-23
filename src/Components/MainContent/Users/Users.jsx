@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './Users.module.css';
-import {IconButton} from "@material-ui/core";
+import {IconButton, Input} from "@material-ui/core";
 import {RiUserFollowLine, RiUserUnfollowLine} from "react-icons/all";
 
 
@@ -11,7 +11,7 @@ const Users = (props) => {
         status: 'I am a boss',
         location: {city: 'Sumy', country: 'Ukraine'},
         imgSrc: 'https://i.redd.it/wellr7jjiv011.jpg',
-        followed: true,
+        followed: false,
     },
         {
             id: 2,
@@ -35,7 +35,7 @@ const Users = (props) => {
             status: 'I like prog, so much',
             location: {city: 'Sumy', country: 'Ukraine'},
             imgSrc: 'https://vignette.wikia.nocookie.net/avatar-the-last-airbender-discord/images/2/23/PFP2.jpg/revision/latest/top-crop/width/360/height/450?cb=20180911165028',
-            followed: true,
+            followed: false,
         },
         {
             id: 5,
@@ -43,7 +43,7 @@ const Users = (props) => {
             status: 'I like prog, so much',
             location: {city: 'Sumy', country: 'Ukraine'},
             imgSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLyHlJd0ANpNKR2eD-EzQjJjDjBk1lHJOT_A&usqp=CAU',
-            followed: true,
+            followed: false,
         },
         {
             id: 6,
@@ -51,7 +51,7 @@ const Users = (props) => {
             status: 'I like prog, so much',
             location: {city: 'Sumy', country: 'Ukraine'},
             imgSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLyHlJd0ANpNKR2eD-EzQjJjDjBk1lHJOT_A&usqp=CAU',
-            followed: true,
+            followed: false,
         },
         {
             id: 7,
@@ -59,7 +59,7 @@ const Users = (props) => {
             status: 'I like prog, so much',
             location: {city: 'Sumy', country: 'Ukraine'},
             imgSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLyHlJd0ANpNKR2eD-EzQjJjDjBk1lHJOT_A&usqp=CAU',
-            followed: true,
+            followed: false,
         },
         {
             id: 8,
@@ -67,7 +67,7 @@ const Users = (props) => {
             status: 'I like prog, so much',
             location: {city: 'Sumy', country: 'Ukraine'},
             imgSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLyHlJd0ANpNKR2eD-EzQjJjDjBk1lHJOT_A&usqp=CAU',
-            followed: true,
+            followed: false,
         },
         {
             id: 9,
@@ -75,7 +75,7 @@ const Users = (props) => {
             status: 'I like prog, so much',
             location: {city: 'Sumy', country: 'Ukraine'},
             imgSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLyHlJd0ANpNKR2eD-EzQjJjDjBk1lHJOT_A&usqp=CAU',
-            followed: true,
+            followed: false,
         },
     ]
 
@@ -96,25 +96,24 @@ const Users = (props) => {
                                     : <IconButton children={<RiUserFollowLine/>} color={"primary"}
                                                   onClick={() => props.follow(user.id)}/>}
                         </span>
-                        <span>
+                        <span className={style.description}>
                             <span>
                                 <div>
                                     {user.fullName}
                                 </div>
-                                <div>
+                                <div className={style.userStatus}>
                                     {user.status}
                                 </div>
                             </span>
-                            <span>
-                                <div>
-                                    {user.location.country}
-                                </div>
-                                <div>
-                                    {user.location.city}
-                                </div>
-                            </span>
-
                         </span>
+                        <div className={style.locations}>
+                            <div>
+                                {user.location.country},
+                            </div>
+                            <div>
+                                {user.location.city}
+                            </div>
+                        </div>
                     </div>
                 </div>)
             }
