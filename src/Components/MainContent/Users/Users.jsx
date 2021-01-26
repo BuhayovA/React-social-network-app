@@ -48,8 +48,9 @@ const Users = ({users,setUsers, follow, unfollow }) => {
                         <ListItemText primary={user.fullName} secondary={user.status}/>
 
                         <ListItemSecondaryAction style={{display: 'flex', alignItems: 'center'}}>
-                            {/*<Typography*/}
-                            {/*    variant='caption'>{`${user.location.country}, ${user.location.city}`}</Typography>*/}
+                            <Typography
+                                variant='caption'>{`${user.location.country}, ${user.location.city}`}
+                            </Typography>
                             {user.followed
                                 ? <IconButton color={"secondary"} children={<RiUserUnfollowLine/>}
                                               onClick={() => unfollow(user.id)}/>

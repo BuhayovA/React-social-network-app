@@ -21,7 +21,7 @@ export const fetchUsersPromise = (users, setUsers) => {
             fullName: user.name,
             imgSrc:user.photos.small,
             location: {
-                country: '',
+                country:'',
                 city: ''
             }
         }))
