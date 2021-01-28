@@ -70,7 +70,7 @@ const Users = ({users,setUsers, follow, unfollow }) => {
             imgSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLyHlJd0ANpNKR2eD-EzQjJjDjBk1lHJOT_A&usqp=CAU',
             followed: false,
         },
-        {
+            {
             id: 8,
             fullName: 'Michail G',
             status: 'I like prog, so much',
