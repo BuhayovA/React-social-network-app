@@ -20,7 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4010b07b-07f7-4f73-b477-d7c8e9ad142b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_01_2021_20_18__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_01_2021_20_18__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Users/UsersContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Users/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Users/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ProfilePageReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ProfilePageReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,6 +149,8 @@
       <workItem from="1611581466697" duration="6898000" />
       <workItem from="1611645981826" duration="3284000" />
       <workItem from="1611674855309" duration="3000" />
+      <workItem from="1611837383799" duration="122000" />
+      <workItem from="1611943847626" duration="2131000" />
     </task>
     <servers />
   </component>

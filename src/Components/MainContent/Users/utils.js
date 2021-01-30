@@ -13,7 +13,7 @@ export const fetchUsers = async (users, setUsers) => {
 }
 
 export const fetchUsersPromise = (users, setUsers) => {
-     return fetch("https://social-network.samuraijs.com/api/1.0/users?count=100")
+     return fetch("https://social-network.samuraijs.com/api/1.0/users?count=15")
          .then(res => res.json())
          .then(data => {
         return data.items.map((user) => ({
