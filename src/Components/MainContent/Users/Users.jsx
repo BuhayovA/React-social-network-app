@@ -10,24 +10,32 @@ import {
     ListItemText,
     Typography
 } from "@material-ui/core";
-import {RiUserFollowLine, RiUserUnfollowLine} from "react-icons/all";
+import {RiUserFollowLine, RiUserSharedLine, RiUserUnfollowLine} from "react-icons/all";
 import * as axios from "axios";
+import {AiOutlineSend} from "react-icons/ai";
 
 
 const Users = ({users,setUsers, follow, unfollow }) => {
-
-    // useEffect(()=> {
-    //     setUsers(usersData)
-    //     return () => {
-    //         setUsers([])
+    // let getUsers = () => {
+    //     if (!users.length) {
+    //         axios.get('https://social-network.samuraijs.com/api/1.0/users?count=20')
+    //             .then(response => {
+    //                 let users = response.data.items.map((user) => ({
+    //                     ...user,
+    //                     fullName: user.name,
+    //                     imgSrc:user.photos.small,
+    //                     location: {
+    //                         country: '',
+    //                         city: ''
+    //                     }
+    //                 }))
+    //                 setUsers(users)
+    //             })
     //     }
-    // }, [users])
-
+    // }
     useEffect(() => {
-
         if (!users.length) {
-
-            axios.get('https://social-network.samuraijs.com/api/1.0/users?count=20')
+            axios.get('https://social-network.samuraijs.com/api/1.0/users?count=10')
                 .then(response => {
                     let users = response.data.items.map((user) => ({
                         ...user,
@@ -48,6 +56,10 @@ const Users = ({users,setUsers, follow, unfollow }) => {
 
     return (
         <List>
+            {/*<IconButton children={<RiUserSharedLine/>}*/}
+            {/*            color={'primary'}*/}
+            {/*            size={'medium'}*/}
+            {/*            onClick={getUsers}/>*/}
             {
                 users.map(user => <>
                     <ListItem className={style.user}>
@@ -56,7 +68,7 @@ const Users = ({users,setUsers, follow, unfollow }) => {
                                 {
                                     user.imgSrc
                                         ? <img src={user.imgSrc} alt="Avatar" className='avatar'/>
-                                        : <Avatar className={style.colorIcon} >{user.fullName[0].toUpperCase()}</Avatar>
+                                        : <Avatar alt="Remy Sharp" className={style.colorIcon} >{user.fullName[0].toUpperCase()}</Avatar>
                                 }
                             </Avatar>
                         </ListItemAvatar>
