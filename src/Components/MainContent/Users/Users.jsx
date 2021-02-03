@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import style from './Users.module.css';
 import {
-    Avatar, CircularProgress, Divider,
+    Avatar, Button, CircularProgress, Divider,
     IconButton,
     List,
     ListItem,
@@ -27,6 +27,19 @@ const Users = ({users,setUsers, follow, unfollow }) => {
         })
     }, [setUsers])
 
+    let page = useRef(1);
+    const addMore = () => {
+        page.current = page.current + 1
+        console.log(page.current);
+        fetchUsersPromise(page.current)
+            .then((data) => {
+                setUsers(data)
+            })
+
+    }
+
+
+
     return (
         isLoading
         ?<div className={style.progress}>
@@ -41,7 +54,7 @@ const Users = ({users,setUsers, follow, unfollow }) => {
                                 {
                                     user.imgSrc
                                         ?<img src={user.imgSrc} alt="Avatar" className='avatar'/>
-                                        :<Avatar className={style.avatarColor}>{user.name[0].toUpperCase()}</Avatar>
+                                        :<Avatar style={{background: "var(--primary)"}}>{user.name[0].toUpperCase()}</Avatar>
                                 }
                             </Avatar>
                         </ListItemAvatar>
@@ -62,6 +75,7 @@ const Users = ({users,setUsers, follow, unfollow }) => {
 
                 </>)
             }
+                <Button className={style.buttonShowMore} onClick={addMore} color='primary'>Show more</Button>
         </List>
     );
 }

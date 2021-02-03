@@ -23,9 +23,10 @@
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_01_2021_20_18__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_01_2021_20_18__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Users/UsersContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Users/Users.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Users/Users.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Users/Users.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Users/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Users/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ProfilePageReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ProfilePageReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/UsersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/UsersReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +67,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../mango-frontend-app/mango-frontend-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -151,6 +152,7 @@
       <workItem from="1611674855309" duration="3000" />
       <workItem from="1611837383799" duration="122000" />
       <workItem from="1611943847626" duration="2131000" />
+      <workItem from="1612341156827" duration="1739000" />
     </task>
     <servers />
   </component>
