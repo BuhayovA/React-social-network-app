@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './Users.module.css';
+import { Pagination } from '@material-ui/lab';
 import {
     Avatar, Divider,
     IconButton,
@@ -17,7 +18,7 @@ import * as axios from "axios";
 class Users extends React.Component{
     componentDidMount() {
         if (!this.props.users.length) {
-            axios.get('https://social-network.samuraijs.com/api/1.0/users?count=20')
+            axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=${this.props.pageSize}&page=${this.props.currentPage}`)
                 .then(response => {
                     let users = response.data.items.map((user) => ({
                         ...user,
@@ -29,12 +30,47 @@ class Users extends React.Component{
                         }
                     }))
                     this.props.setUsers(users)
+                    this.props.setTotalUsersCount(response.data.totalCount)
                 })
         }
     }
+
+    onPageChanged = (page) => {
+        this.props.setCurrentPage(page)
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=${this.props.pageSize}&page=${page}`)
+            .then(response => {
+                let users = response.data.items.map((user) => ({
+                    ...user,
+                    fullName: user.name,
+                    imgSrc:user.photos.small,
+                    location: {
+                        country: '',
+                        city: ''
+                    }
+                }))
+                this.props.setUsers(users)
+            })
+    }
+
     render(){
+        let pagesCount = Math.ceil(this.props.totalUsersCount/this.props.pageSize);
+        let pages = [];
+        for(let i = 1; i <= pagesCount; i++){
+            pages.push(i);
+        }
         return (
             <List>
+                <Pagination   count={pagesCount}/>
+                <div style={{padding: "10px"}}>
+                    {
+                        pages.map(page => {
+
+                            return <span style={{cursor: "pointer", "padding-left": "5px"}}
+                                         onClick={() => this.onPageChanged(page) }
+                                         className={this.props.currentPage === page ? style.selectedPage : ""}>{page}</span>
+                        })
+                    }
+                </div>
                 {
                     this.props.users.map(user => <>
                         <ListItem className={style.user}>
