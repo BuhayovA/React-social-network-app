@@ -10,14 +10,12 @@ import {
     ListItemText,
     Typography
 } from "@material-ui/core";
-import {RiUserFollowLine, RiUserSharedLine, RiUserUnfollowLine} from "react-icons/all";
+import {RiUserFollowLine, RiUserUnfollowLine} from "react-icons/all";
 import * as axios from "axios";
 
 
 class Users extends React.Component{
-
-    constructor(props) {
-        super(props);
+    componentDidMount() {
         if (!this.props.users.length) {
             axios.get('https://social-network.samuraijs.com/api/1.0/users?count=20')
                 .then(response => {
