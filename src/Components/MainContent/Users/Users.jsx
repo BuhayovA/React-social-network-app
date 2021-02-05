@@ -60,17 +60,17 @@ class Users extends React.Component{
         }
         return (
             <List>
-                <Pagination   count={pagesCount}/>
-                <div style={{padding: "10px"}}>
-                    {
-                        pages.map(page => {
 
-                            return <span style={{cursor: "pointer", "padding-left": "5px"}}
-                                         onClick={() => this.onPageChanged(page) }
-                                         className={this.props.currentPage === page ? style.selectedPage : ""}>{page}</span>
-                        })
-                    }
-                </div>
+                {/*<div style={{padding: "10px"}}>*/}
+                {/*    {*/}
+                {/*        pages.map(page => {*/}
+
+                {/*            return <span style={{cursor: "pointer", "padding-left": "5px"}}*/}
+                {/*                         onClick={() => this.onPageChanged(page) }*/}
+                {/*                         className={this.props.currentPage === page ? style.selectedPage : ""}>{page}</span>*/}
+                {/*        })*/}
+                {/*    }*/}
+                {/*</div>*/}
                 {
                     this.props.users.map(user => <>
                         <ListItem className={style.user}>
@@ -99,7 +99,14 @@ class Users extends React.Component{
 
                     </>)
                 }
+                <ListItem>
+                    <Pagination onChange={(event, page) => this.onPageChanged(page)}
+                                page={this.props.currentPage}
+                                count={pagesCount}/>
+                </ListItem>
             </List>
+
+
         );
     }
 }
