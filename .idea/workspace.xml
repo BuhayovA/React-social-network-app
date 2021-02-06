@@ -22,8 +22,11 @@
     <list default="true" id="4010b07b-07f7-4f73-b477-d7c8e9ad142b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Users/Users.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/UsersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/UsersReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Users/User/User.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Users/Users/Users.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Users/User/User.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Users/Users/Users.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Users/Users.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Users/Users.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Users/Users.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MainContent/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContent/Users/UsersContainer.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +62,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Components/MainContent/Users/User" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Components/MainContent/Users" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -73,11 +76,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Nezna\Desktop\Prog\React projects\social network\my-app\src\Components\MainContent\Users\User" />
       <recent name="C:\Users\Nezna\Desktop\Prog\React projects\social network\my-app\src\Components\MainContent\Users" />
+      <recent name="C:\Users\Nezna\Desktop\Prog\React projects\social network\my-app\src\Components\MainContent\Users\Users" />
+      <recent name="C:\Users\Nezna\Desktop\Prog\React projects\social network\my-app\src\Components\MainContent\Users\User" />
       <recent name="C:\Users\Nezna\Desktop\Prog\React projects\social network\my-app\src\redux" />
       <recent name="C:\Users\Nezna\Desktop\Prog\React projects\social network\my-app\src\Components\MainContent\Messages" />
-      <recent name="C:\Users\Nezna\Desktop\Prog\React projects\social network\my-app\src\Components\MainContent\Profile\MyPosts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Nezna\Desktop\Prog\React projects\social network\my-app\src\Components\MainContent\Users" />
@@ -141,6 +144,7 @@
       <workItem from="1611304316708" duration="23655000" />
       <workItem from="1612028956346" duration="32000" />
       <workItem from="1612162896222" duration="7271000" />
+      <workItem from="1612597619680" duration="17000" />
     </task>
     <servers />
   </component>
